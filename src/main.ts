@@ -1,44 +1,60 @@
 // Basic scroll reveal animation
 const observerOptions = {
-    threshold: 0.1
+    threshold: 0.1,
+    rootMargin: "0px 0px -50px 0px"
 };
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target); // Only animate once
         }
     });
 }, observerOptions);
 
 // Select elements to animate
 window.addEventListener('DOMContentLoaded', () => {
-    const animateElements = document.querySelectorAll('.service-card, .contact-card, h2, .reveal-text, .reveal-text-delay, .reveal-text-delay-2');
-    animateElements.forEach(el => observer.observe(el));
+    // Add fade-in class to major layout blocks
+    const elementsToAnimate = [
+        '.hero-content',
+        '.hero-image',
+        '.feature-card',
+        '.cta-section',
+        '.title-lg'
+    ];
+
+    elementsToAnimate.forEach(selector => {
+        document.querySelectorAll(selector).forEach(el => {
+            el.classList.add('fade-in-section');
+            observer.observe(el);
+        });
+    });
 
     // Form Handling
-    const form = document.querySelector('.contact-form') as HTMLFormElement;
+    const form = document.querySelector('form') as HTMLFormElement;
     if (form) {
         form.addEventListener('submit', (e) => {
             e.preventDefault();
             const button = form.querySelector('button') as HTMLButtonElement;
             const originalText = button.textContent;
 
-            button.textContent = 'Envoi en cours...';
+            button.textContent = 'Envoi...';
             button.disabled = true;
 
             // Simulate sending
             setTimeout(() => {
                 button.textContent = 'Message envoyé !';
-                button.style.background = 'linear-gradient(135deg, #10b981, #059669)';
+                // Success color from brand palette (Mineral Green or slightly darker)
+                button.style.backgroundColor = '#626e65';
                 form.reset();
 
                 setTimeout(() => {
                     button.textContent = originalText;
-                    button.style.background = '';
+                    button.style.backgroundColor = '';
                     button.disabled = false;
                 }, 3000);
-            }, 1500);
+            }, 1000);
         });
     }
 });

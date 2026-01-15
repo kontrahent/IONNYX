@@ -1,105 +1,154 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ionnyx | Excellence Technologique & IA</title>
-    <meta name="description" content="Ionnyx accompagne votre entreprise dans la révolution technologique et l'intégration de l'IA.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <title>IONNYX | Simplifier votre quotidien</title>
+    <meta name="description"
+        content="Ionnyx transforme la complexité technologique en levier de croissance. Solutions IA et Apps sur mesure.">
+    <!-- CSS is linked here. Fonts are imported in CSS. -->
     <link rel="stylesheet" href="/style.css">
 </head>
+
 <body>
-    <div id="app">
-        <nav class="glass-nav">
-            <div class="container">
-                <div class="logo">IONNYX</div>
-                <div class="nav-links">
-                    <a href="#services">Services</a>
-                    <a href="#about">À propos</a>
-                    <a href="#contact" class="cta-button mini">Contact</a>
-                </div>
-            </div>
-        </nav>
 
-        <section class="hero">
-            <div class="hero-bg">
-                <div class="blob blob-1"></div>
-                <div class="blob blob-2"></div>
-                <div class="blob blob-3"></div>
-            </div>
+    <!-- Navigation -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="#" class="logo">IONNYX</a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#accueil" class="nav-link">Accueil</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#projets" class="nav-link">Projets</a></li>
+                </ul>
+            </nav>
+            <a href="#contact" class="btn btn-primary">Contactez-nous</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="accueil" class="hero">
             <div class="container">
-                <h1 class="reveal-text">L'IA au service de votre <span>Ambition</span>.</h1>
-                <p class="hero-subtitle reveal-text-delay">Ionnyx transforme la complexité technologique en levier de croissance exponentielle.</p>
-                <div class="hero-actions reveal-text-delay-2">
-                    <a href="#contact" class="cta-button">Démarrer un projet</a>
-                    <a href="#services" class="secondary-button">Découvrir nos solutions</a>
+                <div class="hero-grid">
+                    <div class="hero-content">
+                        <h1 class="title-xl" style="margin-bottom: 1.5rem;">Simplifier votre quotidien, c'est notre
+                            métier.</h1>
+                        <p class="text-lead" style="margin-bottom: 2.5rem;">
+                            Nous concevons des outils digitaux sur-mesure pour donner à votre entreprise une longue
+                            d'avance.
+                            IA, Automatisation, et Web Apps performantes.
+                        </p>
+                        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                            <a href="#contact" class="btn btn-primary">Réserver un rendez-vous</a>
+                            <!-- <a href="#projets" class="btn btn-outline">Voir nos réalisations</a> -->
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <!-- Unsplash Image: 'Engineer/Architect checking tablet' to match mockup vibe -->
+                        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1000&auto=format&fit=crop"
+                            alt="Ingénieurs travaillant sur un projet">
+                    </div>
                 </div>
-            </div>
-            <div class="scrolldown">
-                <div class="mouse"></div>
             </div>
         </section>
 
-        <section id="services" class="services">
+        <!-- Services Section -- Matches 'Iconographie' and 'Expertise' -->
+        <section id="services" class="section">
             <div class="container">
-                <div class="section-header">
-                    <span class="badge">Nos Services</span>
-                    <h2>Expertise de pointe</h2>
+                <div style="text-align: center; max-width: 800px; margin: 0 auto 4rem;">
+                    <span
+                        style="text-transform: uppercase; letter-spacing: 1px; font-size: 0.8rem; font-weight: 700; color: var(--color-accent); margin-bottom: 1rem; display: block;">Nos
+                        Expertises</span>
+                    <h2 class="title-lg">Une technologie utile, <br>pas gadget.</h2>
                 </div>
-                <div class="services-grid">
-                    <div class="service-card">
-                        <div class="icon">🤖</div>
-                        <h3>Intégration IA</h3>
-                        <p>Déploiement de solutions d'IA générative et prédictive sur mesure pour vos processus métiers.</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="icon">⚡</div>
+
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
                         <h3>Automatisation</h3>
-                        <p>Optimisation radicale de vos workflows pour libérer le potentiel créatif de vos équipes.</p>
+                        <p style="color: var(--color-text-muted); margin-top: 0.5rem;">Gagnez du temps en automatisant
+                            vos tâches répétitives. Laissez la machine faire le travail ingrat.</p>
                     </div>
-                    <div class="service-card">
-                        <div class="icon">🌐</div>
-                        <h3>Développement Apps</h3>
-                        <p>Applications web et mobiles haute performance, centrées sur l'expérience utilisateur.</p>
+                    <div class="feature-card">
+                        <div class="feature-icon">🧠</div>
+                        <h3>Intelligence Artificielle</h3>
+                        <p style="color: var(--color-text-muted); margin-top: 0.5rem;">Intégrez l'IA pour analyser vos
+                            données ou assister vos équipes. Pragmatisme avant tout.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📱</div>
+                        <h3>Applications Web & Mobile</h3>
+                        <p style="color: var(--color-text-muted); margin-top: 0.5rem;">Des interfaces fluides et
+                            intuitives, conçues pour vos utilisateurs. React, React Native, Modern Web.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="contact">
+        <!-- Visuals / Projects Teaser - "Visuels" section from guidelines -->
+        <section id="projets" class="section" style="background-color: white;">
             <div class="container">
-                <div class="contact-card">
-                    <div class="contact-info">
-                        <h2>Prêt à passer à l'étape suivante ?</h2>
-                        <p>Discutons de vos besoins et voyons comment Ionnyx peut booster votre entreprise.</p>
+                <div class="hero-grid" style="gap: 4rem;">
+                    <!-- Image Left -->
+                    <div class="hero-image" style="aspect-ratio: 16/9; box-shadow: none;">
+                        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=1000&auto=format&fit=crop"
+                            alt="Collaboration équipe">
                     </div>
-                    <form class="contact-form">
-                        <div class="form-group">
-                            <input type="text" placeholder="Votre nom" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" placeholder="Votre email" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea placeholder="Votre message" rows="4" required></textarea>
-                        </div>
-                        <button type="submit" class="cta-button full">Envoyer le message</button>
+                    <div class="content">
+                        <h2 class="title-lg" style="margin-bottom: 1.5rem;">Un accompagnement humain.</h2>
+                        <p class="text-lead" style="margin-bottom: 1.5rem;">
+                            Au delà du code, c'est une relation de confiance que nous tissons. Nous parlons votre
+                            langue, pas seulement celle des ordinateurs.
+                        </p>
+                        <ul
+                            style="list-style: none; display: flex; flex-direction: column; gap: 1rem; color: var(--color-text-main); font-weight: 500;">
+                            <li style="display: flex; align-items: center; gap: 10px;">✓ Audit gratuit de vos besoins
+                            </li>
+                            <li style="display: flex; align-items: center; gap: 10px;">✓ Développement agile et
+                                transparent</li>
+                            <li style="display: flex; align-items: center; gap: 10px;">✓ Formation et suivi
+                                post-livraison</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="cta-section">
+            <div class="container">
+                <div style="max-width: 600px; margin: 0 auto;">
+                    <h2>Démarrons votre projet</h2>
+                    <p>Remplissez ce formulaire, nous vous recontacterons sous 24h.</p>
+
+                    <form class="form-grid">
+                        <input type="text" placeholder="Votre Nom" class="input-field" required>
+                        <input type="email" placeholder="Votre Email" class="input-field" required>
+                        <textarea placeholder="Comment pouvons-nous vous aider ?" class="input-field" rows="4"
+                            required></textarea>
+                        <button type="submit" class="btn btn-primary"
+                            style="width: 100%; border: none; cursor: pointer;">Envoyer</button>
                     </form>
                 </div>
             </div>
         </section>
+    </main>
 
-        <footer>
-            <div class="container">
-                <div class="footer-content">
-                    <div class="footer-logo">IONNYX</div>
-                    <p>&copy; 2026 Ionnyx. Tous droits réservés.</p>
-                </div>
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="logo" style="font-size: 1.2rem;">IONNYX</div>
+            <div>&copy; 2026 Ionnyx. Tous droits réservés.</div>
+            <div style="display: flex; gap: 1.5rem;">
+                <a href="#" style="color: inherit; text-decoration: none;">Mentions Légales</a>
+                <a href="#" style="color: inherit; text-decoration: none;">Confidentialité</a>
             </div>
-        </footer>
-    </div>
+        </div>
+    </footer>
+
     <script type="module" src="/src/main.ts"></script>
 </body>
+
 </html>
